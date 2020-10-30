@@ -231,7 +231,13 @@ function setup() {
 
 function draw() {
   background("black");
-
+  
+  if(Health < 0){
+    Health = 0;
+  }else if(Health > 100){
+    Health = 100;
+  }
+  
   player.changeAnimation("player");
   player.setCollider("circle", 0, 0, 5);
 
